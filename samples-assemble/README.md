@@ -1,0 +1,12 @@
+<!-- SPDX-License-Identifier: CC-BY-4.0 -->
+<!-- Copyright Contributors to the Egeria project. -->
+
+# Samples Assemble
+
+The *Samples Assemble* module provides a single main() function to run all the samples in sequence.
+
+
+
+
+----
+License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), Copyright Contributors to the Egeria project.

@@ -9,8 +9,8 @@ to set up and run a sustainability initiative at the fictitious company
 
 Improving the sustainability of an organization is a continuous process of: 
 
-* reviewing its operations
-* measuring of the impact of these operations
+* documenting its operations
+* measuring the impact of these operations
 * taking action to reduce the impact
 * measuring the change
 * *repeat*
@@ -26,6 +26,7 @@ The samples are divided into the following groups:
 * [Finding and cataloguing the data](#finding-and-cataloguing-data) that describes the impact of their operations.
 * [Building the sustainability dashboard](#building-the-sustainability-dashboard) to continuously monitor the sustainability status of Coco Pharmaceuticals.
 * [Assessing and improving IT operations](#assessing-and-improving-it-systems).
+* [Sustainability Webpages](#s)
 
 
 ## Extending the governance program
@@ -107,6 +108,14 @@ One surefire way to reduce the impact of their operations is to remove obsolete 
 processing onto a smaller number of more power efficient computers.
 
 [Go to code ...](it-systems)
+
+## Sustainability webpages
+
+Different personas need different information to help them understand the sustainability of their area of responsibility,
+and the impact of the changes they are making on the situation.  The sustainability webpages show different views of
+the Egeria information targeted for different personas.
+
+[Go to code ...](sustainability-webpages)
 
 
 ----
