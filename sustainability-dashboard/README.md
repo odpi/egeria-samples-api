@@ -1,7 +1,7 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-## Building the sustainability dashboard
+# Building the sustainability dashboard
 
 In order to keep sustainability in people's minds (and to provide data to the different regulators),
 Coco Pharmaceuticals want to have a set of dashboards and reports that shows their current status and how it is changing
