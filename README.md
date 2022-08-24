@@ -15,12 +15,12 @@ Improving the sustainability of an organization is a continuous process of:
 * aggregating these impacts across locations and divisions of an organization
 * reviewing, certifying and reporting on sustainability
 * setting targets to improve sustainability
-* taking action to reduce the impact
+* taking action to achieve these targets
 * measuring the change
 * *repeat*
 
 All parts of the organization need to be involved.  Investment in automation around this process is also important
-to ensure improving the sustainability of their operations becomes embedded in the business, not something they
+to ensure ongoing improvements to data collection and remediations that improve the sustainability of their operations becomes embedded in the business, not something they
 focus on from time-to-time.
 
 The samples are divided into the following groups:
@@ -43,7 +43,7 @@ The GHG Protocol defines strategies, processes and techniques for collecting and
 
 Most reporting is focused on Scope 1 and Scope 2; for Scope 3 there is often a limited focus on business travel.
 
-Calculations for each kind of emission is specified in the GHG Protocol. Reference data supporting these calculations varies by location and sometimes industry - so we need to perform the calculations on a location by location basis and then aggregate this information. This is also useful since we can more easily compare locations and identify the different challenges they face. As we perform these calculations it is important that we record how the results are computed.
+Calculations for each kind of emission is specified in the GHG Protocol. Reference data supporting these calculations varies over time, location, and sometimes industry - so we need to perform the calculations on a location by location basis and then aggregate this information. This is also useful since we can more easily compare locations and identify the different challenges they face. As we perform these calculations it is important that we record how the results are computed, including which reference data were used..
 
 ## More information on the samples
 
@@ -101,7 +101,7 @@ The samples for cataloguing data show how to catalog data and link/tag it, so it
 
 ### Building the sustainability dashboard
 
-In order to keep sustainability in people's minds (and to provide data to the different regulators),
+In order to keep sustainability in people's minds (and to provide data to the different stakeholders),
 Coco Pharmaceuticals want to have a set of dashboards and reports that shows their current status and how it is changing
 (better or worse) over time.
 
@@ -109,7 +109,7 @@ Data pipelines take the raw data they have, and normalize the data so that the C
 data to these new dashboards and reports.
 
 The samples for the sustainability dashboard includes building the data pipelines, cataloguing them
-and recording lineage to show the origin of the data in the reports/dashboards.
+and recording lineage to show the origin of the data in the reports/dashboards. Lineage is especially important in certifying the accuracy of reported metrics.
 
 [Go to code ...](sustainability-dashboard)
 
@@ -121,7 +121,7 @@ Coco Pharmaceuticals use many IT systems to run their business, automate their f
 The research work in particular requires powerful machines running calculations and other analytics to identify,
 develop and validate their treatments.
 
-The number of IT systems continues to grow since new systems are often added and old systems are never removed.
+The number of IT systems continues to grow since new systems are often added and old systems are rarely removed.
 One surefire way to reduce the impact of their operations is to remove obsolete IT systems and streamline/consolidate their
 processing onto a smaller number of more power efficient computers.
 

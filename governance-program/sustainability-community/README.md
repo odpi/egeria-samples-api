@@ -8,7 +8,7 @@ The traditional team (department) structure is designed to organize people for t
 
 This sample creates a *community* for people involved in the sustainability initiative.
 The community is used to provide education and other information that is useful to people 
-working on sustainability at Coco Pharmaceuticals.
+working on sustainability at Coco Pharmaceuticals.Communities also serve as the backbone for formal and informal collaborations between individuals and teams across the company.
 
 ![Sustainability Community](../../docs/sustainability-samples-sustainability-community.drawio.png)
 

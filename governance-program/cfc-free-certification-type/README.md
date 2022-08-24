@@ -4,7 +4,7 @@
 # CFC-free certification type
 
 A certification type describes a particular state or type of activity that is recommended or required
-by a governance program.  One of the damaging chemicals we use are refrigerants such as
+by a governance program.  One of the most environmentally damaging category of chemicals we use are refrigerants such as
 Chlorofluorocarbons (CFCs) and Hydrochlorofluorocarbons (HCFCs) because they contribute to ozone depletion
 in the upper atmosphere.
 
