@@ -4,7 +4,7 @@
 # Egeria API Samples (egeria-samples-api)
 
 This repository is a collection of samples that show how to use Egeria's metadata management and governance APIs
-to set up and run a sustainability initiative at the fictitious company. Sustainability reporting is increasingly required by governments and financial institutions. Companies are encouraged to set targets to reduce their emissions and to report on their progresss towards these targets. The [Greenhouse Gas Protocol |](https://ghgprotocol.org/) defines the foundational methods for this process.
+to set up and run a sustainability initiative at the fictitious company. Sustainability reporting is increasingly required by governments and financial institutions. Companies are encouraged to set targets to reduce their emissions and to report on their progress towards these targets. The [Greenhouse Gas Protocol](https://ghgprotocol.org/) defines the foundational methods for this process.
 [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/).
 
 Improving the sustainability of an organization is a continuous process of: 
@@ -31,7 +31,7 @@ The samples are divided into the following groups:
 * [Building the sustainability dashboard](#building-the-sustainability-dashboard) to continuously monitor the sustainability status of Coco Pharmaceuticals.
 * Validating and publishing sustainability report
 * [Assessing and improving IT operations](#assessing-and-improving-it-systems).
-* [Sustainability Webpages](#s)
+* [Sustainability Webpages](#sustainability-webpages)
 
 ## Understanding Sustainability Reporting
 
