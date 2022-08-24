@@ -16,7 +16,7 @@ water use to these aspects and then review the data from different perspectives:
 
 * Business area (and hence associated revenue)
 * Types of activity
-* Types of facilities (such as offices, data centres, )
+* Types and size of facilities (such as offices, data centres, )
 * Types of equipment (such as IT systems, refrigeration units, robots, vehicles, ...)
 
 This way they can pick the most important things to change first.

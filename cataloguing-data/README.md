@@ -4,8 +4,8 @@
 
 # Finding and cataloguing activity data
 
-Understanding the impact of operations takes more than utility bills.  It is important to understand
-impact of travel, lost of coolants (such as CFCs), fuel for vehicles, ...
+Understanding the impact of operations takes more than utility bills.  It is important to understand electricity use, 
+impact of travel, loss of coolants (such as CFCs), fuel for vehicles, ...
 
 Data about activities that produce emissions need to be catalogued so the teams analysing the data and making choices on actions
 to take can find the data. 
