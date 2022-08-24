@@ -13,7 +13,7 @@ The GHG protocol describes three scopes of emissions:
 
 * Scope 2 : This refers to emissions that are indirectly created through the consumption of utilities such as electricity.
 
-* Scope 3 : This category refers to a number of different types of indirect emissions. Measuring scope 3 is a complicated and somewhat controversial topic that is beyond the scope of the current dashboard.
+* Scope 3 : This category refers to a number of different types of indirect emissions. Measuring scope 3 is a complicated and somewhat controversial area - Coco Pharmaceuticals is focused on the sub-category of Business Travel.
 
 It is necessary to understand these scopes when reading the sustainability dashboard.
 

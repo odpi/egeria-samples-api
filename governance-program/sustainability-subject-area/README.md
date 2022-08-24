@@ -5,7 +5,7 @@
 
 The sustainability initiative requires the people at Coco Pharmaceuticals
 to learn new terminology along with new types of data
-and algorithms to calculate emissions.  It is useful to be able
+and processes to calculate emissions.  It is useful to be able
 to collect this knowledge together.
 
 Subject areas describe topics that are of interest to the organization.
