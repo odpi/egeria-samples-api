@@ -1,9 +1,9 @@
 <!-- SPDX-License-Identifier: CC-BY-4.0 -->
 <!-- Copyright Contributors to the Egeria project. -->
 
-# Samples Assemble
+# Samples Ensemble
 
-The *Samples Assemble* module provides a single main() function to run all the samples in sequence.
+The *Samples Ensemble* module provides a single main() function to run all the samples in sequence.
 
 
 
