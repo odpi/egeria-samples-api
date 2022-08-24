@@ -8,7 +8,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <artifactId>egeria-dev-projects</artifactId>
+        <artifactId>egeria-samples-api</artifactId>
         <groupId>org.odpi.egeria</groupId>
         <version>3.11-SNAPSHOT</version>
     </parent>
@@ -16,49 +16,19 @@
     <modelVersion>4.0.0</modelVersion>
 
     <scm>
-        <connection>scm:git:git://github.com/odpi/egeria-dev-projects.git</connection>
-        <developerConnection>scm:git:ssh://github.com/odpi/egeria-dev-projects.git</developerConnection>
-        <url>http://github.com/odpi/egeria-dev-projects</url>
+        <connection>scm:git:git://github.com/odpi/egeria-samples-api.git</connection>
+        <developerConnection>scm:git:ssh://github.com/odpi/egeria-samples-api.git</developerConnection>
+        <url>https://github.com/odpi/egeria-samples-api</url>
     </scm>
 
-    <name>Egeria Ops Utility</name>
+    <name>Egeria Samples Utilities</name>
     <description>
-        Simple commands to start and stop OMAG Servers.
+        Simple methods to capture the parameters for the samples.
     </description>
 
-    <artifactId>egeria-ops-utility</artifactId>
+    <artifactId>samples-utilities</artifactId>
 
     <dependencies>
-
-         <dependency>
-            <groupId>org.odpi.egeria</groupId>
-            <artifactId>admin-services-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.odpi.egeria</groupId>
-            <artifactId>platform-services-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.odpi.egeria</groupId>
-            <artifactId>admin-services-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.odpi.egeria</groupId>
-            <artifactId>integration-daemon-services-api</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.odpi.egeria</groupId>
-            <artifactId>integration-daemon-services-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.odpi.egeria</groupId>
-            <artifactId>http-helper</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -67,33 +37,5 @@
         </dependency>
 
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>assemble-all</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                        <configuration>
-                            <descriptorRefs>
-                                <descriptorRef>jar-with-dependencies</descriptorRef>
-                            </descriptorRefs>
-                            <archive>
-                                <manifest>
-                                    <mainClass>org.odpi.openmetadata.devprojects.utilities.serverops.ServerOps</mainClass>
-                                </manifest>
-                            </archive>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
