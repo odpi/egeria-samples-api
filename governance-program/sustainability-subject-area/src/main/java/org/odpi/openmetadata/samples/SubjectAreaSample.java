@@ -48,7 +48,7 @@ public class SubjectAreaSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            SubjectAreaSample samplesSuite = new SubjectAreaSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

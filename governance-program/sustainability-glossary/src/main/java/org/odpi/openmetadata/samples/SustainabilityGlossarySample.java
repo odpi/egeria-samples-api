@@ -48,7 +48,7 @@ public class SustainabilityGlossarySample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            SustainabilityGlossarySample samplesSuite = new SustainabilityGlossarySample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

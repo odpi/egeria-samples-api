@@ -1,0 +1,42 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ * Copyright Contributors to the ODPi Egeria project.
+ */
+
+plugins {
+    id 'application'
+    id "com.github.johnrengelman.shadow"
+}
+
+dependencies {
+    implementation project(':samples-utilities')
+    implementation project(':governance-program:cfc-free-certification-type')
+    implementation project(':governance-program:people-at-locations')
+    implementation project(':governance-program:sustainability-aspects')
+    implementation project(':governance-program:sustainability-community')
+    implementation project(':governance-program:sustainability-glossary')
+    implementation project(':governance-program:sustainability-governance-definitions')
+    implementation project(':governance-program:sustainability-governance-domain')
+    implementation project(':governance-program:sustainability-governance-zone')
+    implementation project(':governance-program:sustainability-leader')
+    implementation project(':governance-program:sustainability-metadata-server')
+    implementation project(':governance-program:sustainability-metrics')
+    implementation project(':governance-program:sustainability-project')
+    implementation project(':governance-program:sustainability-subject-area')
+    implementation project(':governance-program:sustainability-team-emails')
+    implementation "org.odpi.egeria:open-connector-framework:${egeriaversion}"
+    implementation("org.odpi.egeria:http-helper:${egeriaversion}")
+    runtimeOnly 'ch.qos.logback:logback-classic'
+    compileOnly 'com.fasterxml.jackson.core:jackson-annotations'
+}
+
+description = 'Samples Ensemble'
+
+java {
+    withJavadocJar()
+}
+
+shadowJar {
+    mainClassName = 'org.odpi.openmetadata.samples.ensemble.SamplesEnsemble'
+    archiveClassifier = 'jar-with-dependencies'
+}

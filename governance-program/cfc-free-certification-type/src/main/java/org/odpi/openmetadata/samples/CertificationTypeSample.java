@@ -48,7 +48,7 @@ public class CertificationTypeSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            CertificationTypeSample samplesSuite = new CertificationTypeSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

@@ -48,7 +48,7 @@ public class GovernanceDomainSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            GovernanceDomainSample samplesSuite = new GovernanceDomainSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }
