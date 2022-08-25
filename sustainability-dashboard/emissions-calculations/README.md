@@ -21,6 +21,8 @@ The following activities have methods and calculations associated with them:
 * Fugitive Gas Emissions - HydroFluoroCarbons (HFCs) leaks from refrigeration units
 * Mobile Compustion - from vehicles involved in operations
 
+## Scope 2 - Indirect Emissions from Utility Consumption
+The GHG Protocol provides [Scope 2 Guidance](https://ghgprotocol.org/scope_2_guidance) on calculating  emissions from utility consumption. This includes not only information from utility bills but also how to include **renewable energy agreements** in the calculations.
 
 ----
 License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), Copyright Contributors to the Egeria project.
