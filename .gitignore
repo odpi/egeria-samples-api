@@ -37,18 +37,6 @@ maven-eclipse.xml
 __MACOSX
 .DS_Store
 
-# Ignore generated files for the sample repository proxy
-open-metadata-implementation/access-services/subject-area/subject-area-server/src/main/java/org/odpi/openmetadata/accessservices/subjectarea/generated/**
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/6.7/executionHistory/executionHistory.bin
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/6.7/executionHistory/executionHistory.lock
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/6.7/fileHashes/fileHashes.bin
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/6.7/fileHashes/fileHashes.lock
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/6.7/javaCompile/classAnalysis.bin
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/6.7/javaCompile/javaCompile.lock
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/buildOutputCleanup/buildOutputCleanup.lock
-sample-omrs-proxy-servers/polling-file-omrs-proxy/build/**
-sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/buildOutputCleanup/outputFiles.bin
-
 
 # Ignore sub-charts
 # when helm pulls in dependencies (dependency.yaml) it keeps the chart locally. We don't want
@@ -61,5 +49,62 @@ sample-omrs-proxy-servers/polling-file-omrs-proxy/.gradle/buildOutputCleanup/out
 **/.factorypath
 **/**.code-workspace
 
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.MF
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+
+#Python
+*.pyc
+
+# review board
+.reviewboardrc
+
+# Scala-IDE specific
+.cache-main
+.cache-tests
+
+# DrawIO temporary files
+*.dtmp
+*.bkp
+
+
+# specific Egeria config files
+omag.server.*.config
+omag.server.*.auditlog/**
+*.registrystore
+keystore_*/**
+
+
+
+# Dynamic data used by egeria
+data/**
+
+# other files
+*.swp
+.java-version
+*.graphml
 
 

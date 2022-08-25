@@ -48,7 +48,7 @@ public class SustainabilityAspectsSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            SustainabilityAspectsSample samplesSuite = new SustainabilityAspectsSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

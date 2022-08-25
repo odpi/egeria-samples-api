@@ -6,9 +6,7 @@ package org.odpi.openmetadata.samples.utilities;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.lang.reflect.InvocationTargetException;
 
-import static java.lang.System.exit;
 
 /**
  * SampleBase provides the common functions for a sample that calls Egeria's Open Metadata Services as a main program.

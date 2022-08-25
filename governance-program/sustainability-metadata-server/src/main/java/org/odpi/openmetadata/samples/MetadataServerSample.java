@@ -11,10 +11,10 @@ import java.io.IOException;
 import static java.lang.System.exit;
 
 /**
- * MetaDataSample calls each of the samples from a main program.  It is used to load all of the metadata created
+ * MetadataServerSample calls each of the samples from a main program.  It is used to load all of the metadata created
  * by the samples in a single run.
  */
-public class MetaDataSample extends SampleBase
+public class MetadataServerSample extends SampleBase
 {
     /**
      * Run the samples.
@@ -48,7 +48,7 @@ public class MetaDataSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            MetadataServerSample samplesSuite = new MetadataServerSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

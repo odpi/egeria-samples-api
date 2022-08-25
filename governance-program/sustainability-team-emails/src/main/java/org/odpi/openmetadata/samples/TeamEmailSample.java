@@ -48,7 +48,7 @@ public class TeamEmailSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            TeamEmailSample samplesSuite = new TeamEmailSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }
