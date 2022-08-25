@@ -1,0 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ * Copyright Contributors to the ODPi Egeria project.
+ */
+
+plugins {
+    id 'application'
+    id "com.github.johnrengelman.shadow"
+}
+
+dependencies {
+    implementation project(':samples-utilities')
+    implementation "org.odpi.egeria:open-connector-framework:${egeriaversion}"
+    implementation("org.odpi.egeria:http-helper:${egeriaversion}")
+    runtimeOnly 'ch.qos.logback:logback-classic'
+    compileOnly 'com.fasterxml.jackson.core:jackson-annotations'
+}
+
+description = 'Create a valid value set for GHG protocol'
+
+java {
+    withJavadocJar()
+}
+
+shadowJar {
+    mainClassName = 'org.odpi.openmetadata.samples.ensemble.ValueSetGHGSample'
+    archiveClassifier = 'jar-with-dependencies'
+}

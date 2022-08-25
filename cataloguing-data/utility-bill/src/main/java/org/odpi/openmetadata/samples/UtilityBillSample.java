@@ -48,7 +48,7 @@ public class UtilityBillSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            UtilityBillSample samplesSuite = new UtilityBillSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

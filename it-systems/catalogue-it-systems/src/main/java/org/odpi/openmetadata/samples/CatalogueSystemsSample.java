@@ -48,7 +48,7 @@ public class CatalogueSystemsSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            CatalogueSystemsSample samplesSuite = new CatalogueSystemsSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

@@ -48,7 +48,7 @@ public class FrequentTravellerSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            FrequentTravellerSample samplesSuite = new FrequentTravellerSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

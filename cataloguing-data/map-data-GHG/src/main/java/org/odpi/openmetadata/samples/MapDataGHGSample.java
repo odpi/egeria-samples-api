@@ -48,7 +48,7 @@ public class MapDataGHGSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            MapDataGHGSample samplesSuite = new MapDataGHGSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }
