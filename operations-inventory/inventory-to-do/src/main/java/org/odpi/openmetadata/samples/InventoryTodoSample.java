@@ -11,10 +11,10 @@ import java.io.IOException;
 import static java.lang.System.exit;
 
 /**
- * MapDataSample calls each of the samples from a main program.  It is used to load all of the metadata created
+ * InventoryTodoSample calls each of the samples from a main program.  It is used to load all of the metadata created
  * by the samples in a single run.
  */
-public class MapDataSample extends SampleBase
+public class InventoryTodoSample extends SampleBase
 {
     /**
      * Run the samples.

@@ -11,10 +11,10 @@ import java.io.IOException;
 import static java.lang.System.exit;
 
 /**
- * ValueSetSample calls each of the samples from a main program.  It is used to load all of the metadata created
+ * RefridgerationUnitTypesSample calls each of the samples from a main program.  It is used to load all of the metadata created
  * by the samples in a single run.
  */
-public class ValueSetSample extends SampleBase
+public class RefridgerationUnitTypesSample extends SampleBase
 {
     /**
      * Run the samples.
