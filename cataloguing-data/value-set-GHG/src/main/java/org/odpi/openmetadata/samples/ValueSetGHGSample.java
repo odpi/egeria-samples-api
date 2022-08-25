@@ -48,7 +48,7 @@ public class ValueSetGHGSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            ValueSetGHGSample samplesSuite = new ValueSetGHGSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

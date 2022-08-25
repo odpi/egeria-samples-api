@@ -48,7 +48,7 @@ public class ListPowerUseSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            ListPowerUseSample samplesSuite = new ListPowerUseSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

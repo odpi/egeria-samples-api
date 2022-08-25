@@ -48,7 +48,7 @@ public class ListNoLineageSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            ListNoLineageSample samplesSuite = new ListNoLineageSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

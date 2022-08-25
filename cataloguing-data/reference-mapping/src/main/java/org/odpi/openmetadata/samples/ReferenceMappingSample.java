@@ -48,7 +48,7 @@ public class ReferenceMappingSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            ReferenceMappingSample samplesSuite = new ReferenceMappingSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }
