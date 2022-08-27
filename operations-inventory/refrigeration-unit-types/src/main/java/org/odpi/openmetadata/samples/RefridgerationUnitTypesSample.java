@@ -48,7 +48,7 @@ public class RefridgerationUnitTypesSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            RefridgerationUnitTypesSample samplesSuite = new RefridgerationUnitTypesSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

@@ -48,7 +48,7 @@ public class CatalogueStructureSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            CatalogueStructureSample samplesSuite = new CatalogueStructureSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

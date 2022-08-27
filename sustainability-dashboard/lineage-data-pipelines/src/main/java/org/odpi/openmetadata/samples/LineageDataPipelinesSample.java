@@ -48,7 +48,7 @@ public class LineageDataPipelinesSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            LineageDataPipelinesSample samplesSuite = new LineageDataPipelinesSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

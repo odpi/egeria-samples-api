@@ -48,7 +48,7 @@ public class CoolantTypesSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            CoolantTypesSample samplesSuite = new CoolantTypesSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }
