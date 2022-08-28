@@ -48,7 +48,7 @@ public class ListLocationsSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            ListLocationsSample samplesSuite = new ListLocationsSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

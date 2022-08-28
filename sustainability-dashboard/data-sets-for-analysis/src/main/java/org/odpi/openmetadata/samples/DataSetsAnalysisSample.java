@@ -48,7 +48,7 @@ public class DataSetsAnalysisSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            DataSetsAnalysisSample samplesSuite = new DataSetsAnalysisSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

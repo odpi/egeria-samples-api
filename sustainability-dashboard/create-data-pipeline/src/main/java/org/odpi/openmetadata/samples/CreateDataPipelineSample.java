@@ -48,7 +48,7 @@ public class CreateDataPipelineSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            CreateDataPipelineSample samplesSuite = new CreateDataPipelineSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

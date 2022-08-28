@@ -48,7 +48,7 @@ public class AddNewSiteSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            SamplesEnsemble samplesSuite = new SamplesEnsemble();
+            AddNewSiteSample samplesSuite = new AddNewSiteSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

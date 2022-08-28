@@ -61,6 +61,11 @@ include(':operations-inventory:inventory-to-do')
 include(':operations-inventory:list-locations')
 include(':operations-inventory:list-systems-locations')
 include(':operations-inventory:refridgeration-unit-types')
+include('sustainability-dashboard:catalogue-structure')
+include('sustainability-dashboard:create-data-pipeline')
+include('sustainability-dashboard:data-sets-for-analysis')
+include('sustainability-dashboard:emissions-calculations')
+include('sustainability-dashboard:lineage-data-pipelines')
 
 project(':samples-ensemble').projectDir = file('samples-ensemble')
 project(':samples-utilities').projectDir = file('samples-utilities')
@@ -89,6 +94,11 @@ project(':it-systems:list-power-use').projectDir = file('it-systems/list-power-u
 project(':operations-inventory:add-new-site').projectDir = file('operations-inventory/add-new-site')
 project(':operations-inventory:coolant-types').projectDir = file('operations-inventory/coolant-types')
 project(':operations-inventory:inventory-to-do').projectDir = file('operations-inventory/inventory-to-do')
-project(':operations-inventory:list-locations').projectDir = file
-project(':operations-inventory:list-systems-locations').projectDir
-project(':operations-inventory:refridgeration-unit-types').projectDir
+project(':operations-inventory:list-locations').projectDir = file('operations-inventory/list-locations')
+project(':operations-inventory:list-systems-locations').projectDir('operations-inventory/list-systems-locations')
+project(':operations-inventory:refridgeration-unit-types').projectDir('operations-inventory/refridgeration-unit-types')
+project(':sustainability-dashboard:catalogue-structure').projectDir('sustainability-dashboard/catalogue-structure')
+project(':sustainability-dashboard:create-data-pipeline').projectDir('sustainability-dashboard/create-data-pipeline')
+project(':sustainability-dashboard:data-sets-for-analysis').projectDir('sustainability-dashboard/data-sets-for-analysis')
+project(':sustainability-dashboard:emissions-calculations').projectDir('sustainability-dashboard/emissions-calculations')
+project(':sustainability-dashboard:lineage-data-pipelines').projectDir('sustainability-dashboard/lineage-data-pipelines')
