@@ -10,8 +10,8 @@ plugins {
 
 dependencies {
     implementation project(':samples-utilities')
-    implementation "org.odpi.egeria:open-connector-framework:${egeriaversion}"
-    implementation("org.odpi.egeria:http-helper:${egeriaversion}")
+    implementation "org.odpi.egeria:open-connector-framework"
+    implementation("org.odpi.egeria:http-helper")
     runtimeOnly 'ch.qos.logback:logback-classic'
     compileOnly 'com.fasterxml.jackson.core:jackson-annotations'
 }

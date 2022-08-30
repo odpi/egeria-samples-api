@@ -24,8 +24,8 @@ dependencies {
     implementation project(':governance-program:sustainability-project')
     implementation project(':governance-program:sustainability-subject-area')
     implementation project(':governance-program:sustainability-team-emails')
-    implementation "org.odpi.egeria:open-connector-framework:${egeriaversion}"
-    implementation("org.odpi.egeria:http-helper:${egeriaversion}")
+    implementation "org.odpi.egeria:open-connector-framework"
+    implementation("org.odpi.egeria:http-helper")
     runtimeOnly 'ch.qos.logback:logback-classic'
     compileOnly 'com.fasterxml.jackson.core:jackson-annotations'
 }
