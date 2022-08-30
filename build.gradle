@@ -67,8 +67,6 @@ allprojects {
         // These constraints apply to direct and indirect dependencies, in addition
         // to the versions specified by enforcedPlatform (in dependency below)
         constraints {
-            // This applies constraints so that we use same dependency versions as egeria
-            implementation enforcedPlatform("org.odpi.egeria:egeria:${egeriaversion}")
             // test dependencies
             testCompileOnly "org.junit.jupiter:junit-jupiter-api:${jupiterVersion}"
             testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jupiterVersion}"
