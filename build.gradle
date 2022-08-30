@@ -15,7 +15,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id 'idea'
     // Checks for unnecessary & problematic dependencies
-    id 'com.autonomousapps.dependency-analysis' version "1.13.1"
+    id 'com.autonomousapps.dependency-analysis' version "1.12.0"
     // helps resolve log implementation clashes
     id 'dev.jacomet.logging-capabilities' version "0.10.0"
     // This plugin helps resolve jakarta/javax clashes
@@ -133,33 +133,32 @@ allprojects {
         if (JavaVersion.current().isJava9Compatible()) {
             options.addBooleanOption('html5', true)
         }
+    }
+
 }
+// top level project settings
 
 // Project information
-group = 'org.odpi.egeria'
-version = '3.10-SNAPSHOT'
-ext.name = 'Egeria API Samples'
-description = 'Egeria Samples showing various API calls'
+    group = 'org.odpi.egeria'
+    version = '3.10-SNAPSHOT'
+    ext.name = 'Egeria API Samples'
+    description = 'Egeria Samples showing various API calls'
 
 
-// Dependencies
-dependencies {
-    // authoritative versions for dependencyManagement provided by egeria core - this uses the dependencyManagement
-    // in the main Egeria pom to define the versions of the dependencies.
-    implementation enforcedPlatform("org.odpi.egeria:egeria:${egeriaversion}")
-    //implementation "org.odpi.egeria:egeria:${egeriaversion}"
-
-    compileOnly "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
-    compileOnly "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
-    compileOnly "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
-
-    // Only needed to compile test code
-    testCompileOnly "org.junit.jupiter:junit-jupiter:${jupiterVersion}"
-    testCompileOnly "org.junit.jupiter:junit-jupiter-api:${jupiterVersion}"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jupiterVersion}"
-
-}
+    // but allow to fail - warning only - configure only in root, applies to subprojects
+    // For production code we'd want this to be clean
+    dependencyAnalysis {
+        issues {
+            all {
+                onAny {
+                    severity('warn')
+                }
+            }
+        }
+    }
 
 
-}
+// Always run dependency check
+build.dependsOn("buildHealth")
+
 
