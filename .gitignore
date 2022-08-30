@@ -11,6 +11,13 @@ dependency-reduced-pom.xml
 core*.dmp
 pom.xml.releaseBackup
 
+# gradle
+.gradle
+**/build/
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+
 # IntelliJ
 *.iml
 **.iml
@@ -24,7 +31,6 @@ venv
 .classpath
 .project
 .checkstyle
-
 .settings
 .externalToolBuilders
 maven-eclipse.xml
@@ -37,13 +43,6 @@ maven-eclipse.xml
 __MACOSX
 .DS_Store
 
-
-# Ignore sub-charts
-# when helm pulls in dependencies (dependency.yaml) it keeps the chart locally. We don't want
-# to check these into git as they are not owned by this project and helm will automatically
-# retrieve from the authoritative source
-**/charts/**/charts/**
-
 # vscode editor
 **/.vscode*/**
 **/.factorypath
@@ -54,12 +53,6 @@ __MACOSX
 
 # Log file
 *.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
 # Package Files #
 *.jar
@@ -79,32 +72,15 @@ hs_err_pid*
 #Python
 *.pyc
 
-# review board
-.reviewboardrc
-
-# Scala-IDE specific
-.cache-main
-.cache-tests
 
 # DrawIO temporary files
 *.dtmp
 *.bkp
 
-
-# specific Egeria config files
-omag.server.*.config
-omag.server.*.auditlog/**
-*.registrystore
-keystore_*/**
-
-
-
-# Dynamic data used by egeria
-data/**
-
 # other files
 *.swp
 .java-version
 *.graphml
+
 
 
