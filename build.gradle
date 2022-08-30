@@ -14,25 +14,12 @@ plugins {
     id 'java-library'
     id "com.github.johnrengelman.shadow" version "7.1.2"
     id 'idea'
-    id 'maven-publish'
     // Checks for unnecessary & problematic dependencies
-    id 'com.autonomousapps.dependency-analysis' version "1.10.0"
+    id 'com.autonomousapps.dependency-analysis' version "1.13.1"
     // helps resolve log implementation clashes
     id 'dev.jacomet.logging-capabilities' version "0.10.0"
     // This plugin helps resolve jakarta/javax clashes
     id 'de.jjohannes.java-ecosystem-capabilities' version "0.4"
-    id "org.sonarqube" version "3.4.0.2513"
-}
-
-
-repositories {
-    mavenCentral()
-    maven { url("https://oss.sonatype.org/content/repositories/snapshots") }
-    // Needed for old jackson implementation fixed libraries (used in Egeria)
-    maven {
-        url "https://maven.atlassian.com/3rdparty"
-    }
-    mavenLocal()
 }
 
 /*
@@ -47,44 +34,61 @@ allprojects {
     // Mostly java, so default to this for now
     apply plugin: 'java'
     apply plugin: 'jacoco'
-    //apply plugin: 'io.freefair.lombok'
     apply plugin: 'de.jjohannes.java-ecosystem-capabilities'
     apply plugin: 'dev.jacomet.logging-capabilities'
 
-    // As we've migrated from maven - we'll assume all submodules publish directly to maven
-    apply plugin: 'maven-publish'
-
     repositories {
         mavenCentral()
+        maven { url("https://oss.sonatype.org/content/repositories/snapshots") }
+        // Needed for old jackson implementation fixed libraries (used in Egeria)
         maven {
             url "https://maven.atlassian.com/3rdparty"
         }
+        mavenLocal()
     }
 
     /*
      * Dependency Management - to fix versions. Pick up maven build settings for now
      */
 
-    // Assign variables for any constraints
-
     ext {
         egeriaversion = '3.10'
         slf4jVersion = '1.7.36'
-        jacksonVersion = '2.13.2'
-        jupiterVersion = '5.8.2'
+        jacksonVersion = '2.13.3'
+        jupiterVersion = '5.9.0'
         httpclientVersion = '4.5.13'
         springwebVersion = '5.3.19'
     }
 
     dependencies {
+        // This applies constraints so that we use same dependency versions as egeria
         implementation enforcedPlatform("org.odpi.egeria:egeria:${egeriaversion}")
+
+        // These constraints apply to direct and indirect dependencies, in addition
+        // to the versions specified by enforcedPlatform (in dependency below)
+        constraints {
+            // This applies constraints so that we use same dependency versions as egeria
+            implementation enforcedPlatform("org.odpi.egeria:egeria:${egeriaversion}")
+            // test dependencies
+            testCompileOnly "org.junit.jupiter:junit-jupiter-api:${jupiterVersion}"
+            testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${jupiterVersion}"
+
+            compileOnly "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+            compileOnly "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
+            compileOnly "com.fasterxml.jackson.core:jackson-core:${jacksonVersion}"
+
+        }
+
+        // These are dependencies we include IN ALL PROJECTS (try to be selective)
+        testCompileOnly 'org.junit.jupiter:junit-jupiter-api'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+        compileOnly "com.fasterxml.jackson.core:jackson-databind"
+        compileOnly "com.fasterxml.jackson.core:jackson-annotations"
+        compileOnly "com.fasterxml.jackson.core:jackson-core"
     }
 
-    java {
-        withSourcesJar()
-        withJavadocJar()
-    }
-
+    // Jacoco version for code coverage
     jacoco {
         toolVersion = "0.8.8"
     }
@@ -93,93 +97,42 @@ allprojects {
     test {
         useJUnitPlatform()
     }
-    dependencies {
-        testImplementation("junit:junit")
-        testRuntimeOnly("org.junit.vintage:junit-vintage-engine")
-        testImplementation 'org.junit.jupiter:junit-jupiter-api'
-        testImplementation 'org.junit.jupiter:junit-jupiter-engine'
-    }
 
-
+    // Fixes java compile flags & options for plugin
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
         sourceCompatibility = "11"
         targetCompatibility = "11"
         options.compilerArgs << "-Xlint:all"
+        options.incremental = true
+        options.fork = true
+        options.failOnError = true
     }
 
-
+    // Probably duplicate but leave as proven
+    java {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+        withJavadocJar()
+        withSourcesJar()
+    }
 
     // Tasks to help in finding dependency chains
     task printAllDependencies(type: DependencyReportTask) {}
     task printSubDependencies(type: DependencyReportTask) {}
     task findDependency(type: DependencyInsightReportTask) {}
 
-    // Whilst all modules have their own javadoc, we only build
-    // an aggregate for the client and API modules
-    javadoc {
-        include ( "**/api/*.java" )
-        include ( "**/client/*.java" )
-        include ( "**/properties/*.java" )
-        include ( "**/metadataelements/*.java" )
-        include ( "**/metadataelement/*.java" )
-        include ( "**/events/*.java" )
-        include ( "**/ffdc/*.java" )
-        include ( "**/configuration/*.java" )
-        include ( "**/configuration/registration/*.java" )
-        include ( "**/store/*.java" )
-        include ( "**/connectors/*.java" )
-        include ( "**/adminservices/*.java" )
-        include ( "**/connector/*.java" )
-        include ( "**/frameworks/*.java" )
-        include ( "**/context/*.java" )
-        include ( "**/graph/*.java" )
-        include ( "**/model/*.java" )
-        include ( "**/auditlog/*.java" )
-        include ( "**/omrstopic/*.java" )
-        include ( "**/openmetadatatopic/*.java" )
-        include ( "**/archivestore/*.java" )
-        include ( "**/auditlogstore/*.java" )
-        include ( "**/cohortregistrystore/*.java" )
-        include ( "**/repositoryconnector/*.java" )
-        include ( "**/repositoryeventmapper/*.java" )
-        include ( "**/metadatacollectionstore/*.java" )
-        include ( "**/metadatacollectionstore/utilities/*.java" )
-        include ( "**/archiveutilities/*.java" )
-        include ( "**/clients/*.java" )
-        include ( "**/metadatasecurity/*.java" )
+    // ensures we pick up the very latest snapshots when built
+    configurations.all {
+        // Recommended if using snapshots, so that we don't cache (as they may change frequently)
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
     }
-}
 
-/*
- * Configuration for sub projects only
- */
-
-subprojects {
-}
-
-// ensures we pick up the very latest snapshots when built
-configurations.all {
-    // check for updates every build - critical when using Snapshots
-    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
-    // Explicit exclusions for transitive dependencies - logging
-    // picked up from hive libraries, we need to allow Egeria to decide logging implementation
-    exclude group: 'org.slf4j', module: 'slf4j-log4j12'
-    exclude group: 'org.slf4j', module: 'slf4j-reload4j'
-    exclude group: 'org.slf4j', module: 'slf4j-api'
-    exclude group: 'ch.qos.reload4j', module: 'reload4j'
-    exclude group: 'org.apache.logging.log4j', module: 'log4j-slf4j-impl'
-    // TODO: Excluding protobuf may not be needed as we are now shading
-    exclude group: 'com.google.protobuf', module: 'protobuf-java'
-
-    // exclude the following dependencies that we do not use, but bring in vulnerabilities from
-    // hadoop commons
-    exclude group: "org.eclipse.jetty"
-    exclude group: 'log4j', module: 'log4j'
-    exclude group: 'org.codehaus.jackson', module: 'jackson-mapper-asl'
-    exclude group: 'io.netty'
-    exclude group: 'com.google.guava'
-
+    // For later java versions this is recommended - keep conditional in case we want to build on 8
+    javadoc {
+        if (JavaVersion.current().isJava9Compatible()) {
+            options.addBooleanOption('html5', true)
+        }
 }
 
 // Project information
@@ -188,17 +141,13 @@ version = '3.10-SNAPSHOT'
 ext.name = 'Egeria API Samples'
 description = 'Egeria Samples showing various API calls'
 
-// Versions - most should be picked up from the import of the egeria base POM
-// TODO: Versions already in pom can be removed
-
-
 
 // Dependencies
 dependencies {
     // authoritative versions for dependencyManagement provided by egeria core - this uses the dependencyManagement
     // in the main Egeria pom to define the versions of the dependencies.
     implementation enforcedPlatform("org.odpi.egeria:egeria:${egeriaversion}")
-//    implementation "org.odpi.egeria:egeria:${egeriaversion}"
+    //implementation "org.odpi.egeria:egeria:${egeriaversion}"
 
     compileOnly "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
     compileOnly "com.fasterxml.jackson.core:jackson-annotations:${jacksonVersion}"
@@ -212,39 +161,5 @@ dependencies {
 }
 
 
-
-// Maven Central (technically sonatype oss) requires we distribute source and javadoc.
-// Also declare use of java 11 language & target
-java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-    withJavadocJar()
-    withSourcesJar()
 }
 
-// More Java language settings & linting
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-    sourceCompatibility = "11"
-    targetCompatibility = "11"
-    options.incremental = true
-    options.fork = true
-    options.failOnError = true
-    options.compilerArgs << '-Xlint:unchecked' << '-Xlint:deprecation'
-}
-
-// For later java versions this is recommended - keep conditional in case we want to build on 8
-javadoc {
-    if (JavaVersion.current().isJava9Compatible()) {
-        options.addBooleanOption('html5', true)
-    }
-}
-
-
-sonarqube {
-    properties {
-        property "sonar.projectKey", "odpi_egeria-samples-api"
-        property "sonar.organization", "odpi-github"
-        property "sonar.host.url", "https://sonarcloud.io"
-    }
-}
