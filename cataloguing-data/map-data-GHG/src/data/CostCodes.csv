@@ -1,0 +1,15 @@
+Category,Cost Area,QuickAccounting,ProAccounting,Description
+Site,Building Space,A10,10010,Costs associated with acquiring space for business operations
+Site,Building Electrify,A50,10020,Electrical utility costs
+Site,Building Gas,A60,10030,Natural gas utility costs
+Site,Building Maintenance,A70,10040,Costs to maintain the space
+Site,Furniture,B05,20010,
+Site,Research Equipment,B10,30010,Equipment in support of research activities
+Site,Office Equipment,B50,20050,Equipment in support of office activities
+Site,Manufacturing Equipment,B100,40010,Equipment in support of manufacturing operations
+Site,Office Supplies,B20,20020,Supplies supporting office activities from paper to pens.
+Site,Research Supplies,B30,30020,"Supplies supporting research activities such as personal protective gear, specialty gases, lab ware."
+Site,Manufacturing Supplies,C500,45000,"Supplies supporting  manufacturing activities such as cleaning supplies, tools, maintenance supplies."
+Site,Manufacturing Raw Materials,C600,46000,"Reagents, biologicals, packaging, etc."
+Site,Research Chemicals,D100,32000,Specialty chemicals and reagents
+Site,Research Biologicals,D200,33000,Research grade biologicals used for creation and testing of drugs.

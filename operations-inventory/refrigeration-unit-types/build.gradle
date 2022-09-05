@@ -16,13 +16,13 @@ dependencies {
     compileOnly 'com.fasterxml.jackson.core:jackson-annotations'
 }
 
-description = 'Create new types to catalogue refridgeration types'
+description = 'Create new types to catalogue refrigeration types'
 
 java {
     withJavadocJar()
 }
 
 shadowJar {
-    mainClassName = 'org.odpi.openmetadata.samples.ensemble.RefridgerationUnitTypesSample'
+    mainClassName = 'org.odpi.openmetadata.samples.ensemble.RefrigerationUnitTypesSample'
     archiveClassifier = 'jar-with-dependencies'
 }

@@ -10,6 +10,11 @@ plugins {
 
 dependencies {
     implementation project(':samples-utilities')
+    implementation project(':cataloguing-data:areas-frequent-travellers')
+    implementation project(':cataloguing-data:map-data-GHG')
+    implementation project(':cataloguing-data:reference-mapping')
+    implementation project(':cataloguing-data:utility-bill')
+    implementation project(':cataloguing-data:value-set-GHG')
     implementation project(':governance-program:cfc-free-certification-type')
     implementation project(':governance-program:people-at-locations')
     implementation project(':governance-program:sustainability-aspects')
@@ -24,6 +29,17 @@ dependencies {
     implementation project(':governance-program:sustainability-project')
     implementation project(':governance-program:sustainability-subject-area')
     implementation project(':governance-program:sustainability-team-emails')
+    implementation project(':it-systems:catalogue-it-systems')
+    implementation project(':it-systems:list-no-lineage')
+    implementation project(':it-systems:list-power-use')
+    implementation project(':operations-inventory:add-new-site')
+    implementation project(':operations-inventory:coolant-types')
+    implementation project(':operations-inventory:inventory-to-do')
+    implementation project(':operations-inventory:list-locations')
+    implementation project(':operations-inventory:list-systems-locations')
+    implementation project(':operations-inventory:refrigeration-unit-types')
+    implementation project(':sustainability-dashboard:catalogue-structure')
+    implementation project(':sustainability-dashboard:lineage-data-pipelines')
     implementation "org.odpi.egeria:open-connector-framework"
     implementation("org.odpi.egeria:http-helper")
     runtimeOnly 'ch.qos.logback:logback-classic'

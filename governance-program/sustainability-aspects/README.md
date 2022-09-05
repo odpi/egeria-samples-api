@@ -4,8 +4,9 @@
 # List the number of aspects that are set up for sustainability so far
 
 
- Text description here 
-
+The other samples in this repository are setting up different parts of the governance program.
+This task creates a sample that queries Egeria and indicates which parts are set up and which are yet to complete.
+As the samples are completed, this sample will return more information.
 
  Image here
 

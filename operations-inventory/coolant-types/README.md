@@ -3,7 +3,7 @@
 
 # CoolantType Valid Value Set
 
-Coco Pharmaceuticals need to create an inventory of their refrigeration unit with the type of coolant they use.  
+Coco Pharmaceuticals need to create an inventory of their refrigeration unit with the type of coolant they use.
 The aim is to replace each refrigeration unit that uses CFCs of HCFCs since
 these are ozone depleting chemicals.
 

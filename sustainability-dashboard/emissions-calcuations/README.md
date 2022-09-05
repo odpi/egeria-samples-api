@@ -3,8 +3,8 @@
 
 # Calculating Carbon Emissions
 
-An organization produces carbon emissions through the activities 
-it engages in. The Greenhouse Gas Protocol (GHG) describes how to calculate these emissions for a variety of activities and sources.
+An organization produces carbon emissions through the activities it engages in. 
+The Greenhouse Gas Protocol (GHG) describes how to calculate these emissions for a variety of activities and sources.
 Three classes of emissions are defined:
 
 * Scope 1 - Direct Emissions from Operations
@@ -18,10 +18,11 @@ The following activities have methods and calculations associated with them:
 ## Scope 1 - Direct Emissions
 
 * Stationary Combustion - for ovens, mixers and other equipment
-* Fugitive Gas Emissions - HydroFluoroCarbons (HFCs) leaks from refrigeration units
-* Mobile Compustion - from vehicles involved in operations
+* Fugitive Gas Emissions - Hydrofluorocarbons (HFCs) leaks from refrigeration units
+* Mobile Combustion - from vehicles involved in operations
 
 ## Scope 2 - Indirect Emissions from Utility Consumption
+
 The GHG Protocol provides [Scope 2 Guidance](https://ghgprotocol.org/scope_2_guidance) on calculating  emissions from utility consumption. This includes not only information from utility bills but also how to include **renewable energy agreements** in the calculations.
 
 ----

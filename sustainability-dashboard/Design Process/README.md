@@ -5,13 +5,13 @@ To build the supply chain we need to first understand the requirements. A good w
 
 While we won't always be able to start with a concrete target such as this dashboard, in the case of sustainability reporting all we have to do is to look at the kinds of material different companies produce to get an idea of what Coco Pharmaceuticals will need to construct. With that in mind, we've put together the following prototype sustainability dashboard. This dashboard is for internal stakeholders within Coco Pharmaceuticals - it contains much more information than would typically be published to broader communities.
 
-###Sustainability Dashboard - Enterprise Level
+### Sustainability Dashboard - Enterprise Level
 The main page of the dashboard looks similar to this:
 ![Sustainability Dashboard Enterprise View](../../docs/Sustainability-Dashboard-Enterprise.png)
 
 
 These top graphs summarize Coco Pharmaceutical's equivalent carbon emissions over the last five years in total and per country they operate within. 
-###Sustainability Dashboard - by Scope 
+### Sustainability Dashboard - by Scope 
 
 To gain a better understanding of how emissions are being produced and from where we need to be able to **drill-in** to the data to investigate further. The first step is to break the emissions down by scope:
 ![Sustainability Dashboard - Scope View](../../docs/Sustainability-Dashboard-by-Scope.png)
