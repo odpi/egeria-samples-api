@@ -11,10 +11,10 @@ import java.io.IOException;
 import static java.lang.System.exit;
 
 /**
- * RefridgerationUnitTypesSample calls each of the samples from a main program.  It is used to load all of the metadata created
+ * RefrigerationUnitTypesSample calls each of the samples from a main program.  It is used to load all of the metadata created
  * by the samples in a single run.
  */
-public class RefridgerationUnitTypesSample extends SampleBase
+public class RefrigerationUnitTypesSample extends SampleBase
 {
     /**
      * Run the samples.
@@ -48,7 +48,7 @@ public class RefridgerationUnitTypesSample extends SampleBase
             String serverName = getServerName(args);
             String userId = getUserId(args);
 
-            RefridgerationUnitTypesSample samplesSuite = new RefridgerationUnitTypesSample();
+            RefrigerationUnitTypesSample samplesSuite = new RefrigerationUnitTypesSample();
 
             samplesSuite.runSample(serverName, url, userId);
         }

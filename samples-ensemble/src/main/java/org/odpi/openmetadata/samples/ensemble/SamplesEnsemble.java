@@ -4,20 +4,7 @@ package org.odpi.openmetadata.samples.ensemble;
 
 
 import org.odpi.openmetadata.http.HttpHelper;
-import org.odpi.openmetadata.samples.CertificationTypeSample;
-import org.odpi.openmetadata.samples.GovernanceDefinitionsSample;
-import org.odpi.openmetadata.samples.GovernanceDomainSample;
-import org.odpi.openmetadata.samples.GovernanceZoneSample;
-import org.odpi.openmetadata.samples.MetadataServerSample;
-import org.odpi.openmetadata.samples.PeopleLocationsSample;
-import org.odpi.openmetadata.samples.SubjectAreaSample;
-import org.odpi.openmetadata.samples.SustainabilityAspectsSample;
-import org.odpi.openmetadata.samples.SustainabilityCommunitySample;
-import org.odpi.openmetadata.samples.SustainabilityGlossarySample;
-import org.odpi.openmetadata.samples.SustainabilityLeaderSample;
-import org.odpi.openmetadata.samples.SustainabilityMetricsSample;
-import org.odpi.openmetadata.samples.SustainabilityProjectsSample;
-import org.odpi.openmetadata.samples.TeamEmailSample;
+import org.odpi.openmetadata.samples.*;
 import org.odpi.openmetadata.samples.utilities.SampleBase;
 
 import java.io.IOException;
@@ -41,28 +28,45 @@ public class SamplesEnsemble extends SampleBase
                           String serverPlatformRootURL,
                           String userId)
     {
+        FrequentTravellerSample       frequentTravellerSample       = new FrequentTravellerSample();
+        MapDataGHGSample              mapDataGHGSample              = new MapDataGHGSample();
+        ReferenceMappingSample        referenceMappingSample        = new ReferenceMappingSample();
+        UtilityBillSample             utilityBillSample             = new UtilityBillSample();
+        ValueSetGHGSample             valueSetGHGSample             = new ValueSetGHGSample();
+        GovernanceZoneSample          governanceZoneSample          = new GovernanceZoneSample();
+        GovernanceDomainSample        governanceDomainSample        = new GovernanceDomainSample();
+        GovernanceDefinitionsSample   governanceDefinitionsSample   = new GovernanceDefinitionsSample();
+        SubjectAreaSample             subjectAreaSample             = new SubjectAreaSample();
         CertificationTypeSample       certificationTypeSample       = new CertificationTypeSample();
         PeopleLocationsSample         peopleLocationsSample         = new PeopleLocationsSample();
         SustainabilityAspectsSample   sustainabilityAspectsSample   = new SustainabilityAspectsSample();
         SustainabilityCommunitySample sustainabilityCommunitySample = new SustainabilityCommunitySample();
         SustainabilityGlossarySample  sustainabilityGlossarySample  = new SustainabilityGlossarySample();
-        GovernanceDefinitionsSample   governanceDefinitionsSample   = new GovernanceDefinitionsSample();
-        GovernanceDomainSample        governanceDomainSample        = new GovernanceDomainSample();
-        GovernanceZoneSample          governanceZoneSample          = new GovernanceZoneSample();
         SustainabilityLeaderSample    sustainabilityLeaderSample    = new SustainabilityLeaderSample();
         MetadataServerSample          sustainabilityMetadataServer  = new MetadataServerSample();
         SustainabilityMetricsSample   sustainabilityMetricsSample   = new SustainabilityMetricsSample();
         SustainabilityProjectsSample  sustainabilityProjectsSample  = new SustainabilityProjectsSample();
-        SubjectAreaSample             subjectAreaSample             = new SubjectAreaSample();
         TeamEmailSample               teamEmailSample               = new TeamEmailSample();
+        CatalogueSystemsSample        catalogueSystemsSample        = new CatalogueSystemsSample();
+        ListNoLineageSample           listNoLineageSample           = new ListNoLineageSample();
+        ListPowerUseSample            listPowerUseSample            = new ListPowerUseSample();
+        AddNewSiteSample              addNewSiteSample              = new AddNewSiteSample();
+        CoolantTypesSample            coolantTypesSample            = new CoolantTypesSample();
+        InventoryTodoSample           inventoryTodoSample           = new InventoryTodoSample();
+        ListLocationsSample           listLocationsSample           = new ListLocationsSample();
+        ListSystemsLocationsSample    listSystemsLocationsSample    = new ListSystemsLocationsSample();
+        RefrigerationUnitTypesSample  refrigerationUnitTypesSample  = new RefrigerationUnitTypesSample();
+        CatalogueStructureSample      catalogueStructureSample      = new CatalogueStructureSample();
+        LineageDataPipelinesSample    lineageDataPipelinesSample    = new LineageDataPipelinesSample();
 
-        governanceDomainSample.runSample(serverName, serverPlatformRootURL, userId);
         governanceZoneSample.runSample(serverName, serverPlatformRootURL, userId);
+        governanceDomainSample.runSample(serverName, serverPlatformRootURL, userId);
+        governanceDefinitionsSample.runSample(serverName, serverPlatformRootURL, userId);
+        subjectAreaSample.runSample(serverName, serverPlatformRootURL, userId);
+
         certificationTypeSample.runSample(serverName, serverPlatformRootURL, userId);
         peopleLocationsSample.runSample(serverName, serverPlatformRootURL, userId);
-        subjectAreaSample.runSample(serverName, serverPlatformRootURL, userId);
         sustainabilityCommunitySample.runSample(serverName, serverPlatformRootURL, userId);
-        governanceDefinitionsSample.runSample(serverName, serverPlatformRootURL, userId);
         sustainabilityLeaderSample.runSample(serverName, serverPlatformRootURL, userId);
         sustainabilityProjectsSample.runSample(serverName, serverPlatformRootURL, userId);
         sustainabilityGlossarySample.runSample(serverName, serverPlatformRootURL, userId);
@@ -70,6 +74,24 @@ public class SamplesEnsemble extends SampleBase
         teamEmailSample.runSample(serverName, serverPlatformRootURL, userId);
         sustainabilityAspectsSample.runSample(serverName, serverPlatformRootURL, userId);
         sustainabilityMetadataServer.runSample(serverName, serverPlatformRootURL, userId);
+
+        frequentTravellerSample.runSample(serverName, serverPlatformRootURL, userId);
+        mapDataGHGSample.runSample(serverName, serverPlatformRootURL, userId);
+        referenceMappingSample.runSample(serverName, serverPlatformRootURL, userId);
+        utilityBillSample.runSample(serverName, serverPlatformRootURL, userId);
+        valueSetGHGSample.runSample(serverName, serverPlatformRootURL, userId);
+
+        catalogueSystemsSample.runSample(serverName, serverPlatformRootURL, userId);
+        listNoLineageSample.runSample(serverName, serverPlatformRootURL, userId);
+        listPowerUseSample.runSample(serverName, serverPlatformRootURL, userId);
+        addNewSiteSample.runSample(serverName, serverPlatformRootURL, userId);
+        coolantTypesSample.runSample(serverName, serverPlatformRootURL, userId);
+        inventoryTodoSample.runSample(serverName, serverPlatformRootURL, userId);
+        listLocationsSample.runSample(serverName, serverPlatformRootURL, userId);
+        listSystemsLocationsSample.runSample(serverName, serverPlatformRootURL, userId);
+        refrigerationUnitTypesSample.runSample(serverName, serverPlatformRootURL, userId);
+        catalogueStructureSample.runSample(serverName, serverPlatformRootURL, userId);
+        lineageDataPipelinesSample.runSample(serverName, serverPlatformRootURL, userId);
     }
 
 
