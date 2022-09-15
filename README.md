@@ -41,16 +41,24 @@ The samples are divided into the following groups:
 
 ## Bringing the samples onto your local machine
 
-## Just want to build and run
+### Just want to build and run
 
 If you want to just build and run the samples, all you need to do is clone this
-git repository.  Create a new directory (folder) on your machine, open a terminal (command) window; change into that folder and enter `git clone https://github.com/odpi/egeria-samples-api.git` on the command line and press *return*.
+git repository.  Create a new directory (folder) on your machine, open a terminal (command) window; change into your new directory and enter:
 
-The code is copied into your new directory, and you're ready to build or load it into an IDE.
+```
+git clone https://github.com/odpi/egeria-samples-api.git
+```
 
-## Wanting to contribute new code and documentation
+on the command line and press *return*. The code is copied into your new directory, and you're ready to build or load it into an IDE.
+
+### Wanting to contribute new code and documentation
 
 New contributions are added to the git repository using a *Pull Request* from a personal *Fork*.  If you want to contribute to this git repository, then you need to create a fork of the repository and then create a clone of the repository from your fork.
+
+```
+git clone https://github.com/<yourGitUserId>/egeria-samples-api.git
+```
 
 ## Getting the Java Compiler
 
@@ -71,15 +79,15 @@ Alternatively you may wish to install from your package manager such as homebrew
 Most of the samples are written in Java, although there are a couple that are in python.  The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
 
 ```
-   ./gradlew build
+./gradlew build
 ```
-Samples that need some work on are described in the [GitHib Issues](https://github.com/odpi/egeria-samples-api/issues) for this repository.
+Samples that need some work on are described in the [GitHub Issues](https://github.com/odpi/egeria-samples-api/issues) for this repository.
 
 ## Running the samples
 
 Each sample is located in its own directory.   The [samples-ensemble](https://github.com/odpi/egeria-samples-api/tree/main/samples-ensemble) module will run all the samples.
 
-They are client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/)
+They are all client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/)
 
 ![running samples](docs/running-egeria-samples.png)
 
@@ -89,7 +97,7 @@ Whether you choose to run a sample individually or through *samples-ensemble*, y
 * The *serverName* of the metadata access server
 * The *userId* to use on the calls.
 
-More information about the samples is shown below.
+This information is provided from the Egeria deployment environment.
 
 ## Understanding Sustainability Reporting
 
