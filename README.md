@@ -3,8 +3,9 @@
 
 # Egeria API Samples (egeria-samples-api)
 
-This repository is a collection of samples that show how to use Egeria's metadata management and governance APIs
-to set up and run a sustainability initiative at the fictitious company
+This repository is a collection of samples that show how to use Egeria's metadata
+management and governance APIs to set up and run a sustainability initiative at
+the fictitious company
 [Coco Pharmaceuticals](https://egeria-project.org/practices/coco-pharmaceuticals/).
 
 Sustainability reporting is increasingly required by governments and financial institutions. 
@@ -23,19 +24,72 @@ Improving the sustainability of an organization is a continuous process of:
 * measuring the change
 * *repeat*
 
-All parts of the organization need to be involved.  Investment in automation around this process is also important
-to ensure ongoing improvements to data collection and remediations that improve the sustainability of their operations becomes embedded in the business, not something they
-focus on from time-to-time.
+All parts of the organization need to be involved.
+Investment in automation around this process is also important
+to ensure ongoing improvements to data collection and remediation actions that
+improve the sustainability of their operations becomes embedded in the business,
+not something they focus on from time-to-time.
 
 The samples are divided into the following groups:
 
 * [Extending the governance program](#extending-the-governance-program) to include a sustainability focus.
 * [Creating an inventory](#creating-the-operations-inventory) of Coco Pharmaceuticals operations.
 * [Finding and cataloguing the data](#finding-and-cataloguing-data) that describes the impact of their operations.
-* [Building the sustainability dashboard](#building-the-sustainability-dashboard) to continuously monitor the sustainability status of Coco Pharmaceuticals.
-* Validating and publishing sustainability report
+* [Validating and publishing sustainability report](#building-the-sustainability-dashboard) to continuously monitor the sustainability status of Coco Pharmaceuticals. 
 * [Assessing and improving IT operations](#assessing-and-improving-it-systems).
 * [Sustainability Webpages](#sustainability-webpages)
+
+## Bringing the samples onto your local machine
+
+## Just want to build and run
+
+If you want to just build and run the samples, all you need to do is clone this
+git repository.  Create a new directory (folder) on your machine, open a terminal (command) window; change into that folder and enter `git clone https://github.com/odpi/egeria-samples-api.git` on the command line and press *return*.
+
+The code is copied into your new directory, and you're ready to build or load it into an IDE.
+
+## Wanting to contribute new code and documentation
+
+New contributions are added to the git repository using a *Pull Request* from a personal *Fork*.  If you want to contribute to this git repository, then you need to create a fork of the repository and then create a clone of the repository from your fork.
+
+## Getting the Java Compiler
+
+Egeria uses version 11 of Java.
+You will need a Java Development Kit (JDK) installed on your machine in order to build Egeria. (A JDK will include a JRE.)
+
+There are various JREs/JDKs available, and you may even have one pre-installed on your system. You can check if java is already installed by running the command `java -version` from the command-line.
+
+Java can be installed by:
+
+* Downloading the OpenJDK 11 (LTS) HotSpot JVM from [Adoptium](https://adoptium.net/).
+* Running the installer that is downloaded.
+
+Alternatively you may wish to install from your package manager such as homebrew on MacOS.
+
+## Building the samples
+
+Most of the samples are written in Java, although there are a couple that are in python.  The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
+
+```
+   ./gradlew build
+```
+Samples that need some work on are described in the [GitHib Issues](https://github.com/odpi/egeria-samples-api/issues) for this repository.
+
+## Running the samples
+
+Each sample is located in its own directory.   The [samples-ensemble](https://github.com/odpi/egeria-samples-api/tree/main/samples-ensemble) module will run all the samples.
+
+They are client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/)
+
+![running samples](docs/running-egeria-samples.png)
+
+Whether you choose to run a sample individually or through *samples-ensemble*, you need to supply three pieces of information:
+
+* The *serverURLRoot* of the OMAG server platform.
+* The *serverName* of the metadata access server
+* The *userId* to use on the calls.
+
+More information about the samples is shown below.
 
 ## Understanding Sustainability Reporting
 
