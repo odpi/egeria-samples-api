@@ -102,7 +102,7 @@ Egeria uses version 3 of python.  There are various mechanisms for acquiring pyt
 
 Each sample is located in its own directory.   The [samples-ensemble](https://github.com/odpi/egeria-samples-api/tree/main/samples-ensemble) module will run all the Java samples.
 
-The samples are all client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/)
+The samples are all client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/).  The metadata repository is preloaded with an [open metadata archive](https://egeria-project.org/concepts/open-metadata-archive/) that contains sample metadata from Coco Pharmaceuticals.  This archive is called [CocoComboArchive.json](https://github.com/odpi/egeria-samples/blob/master/content-packs/CocoComboArchive.json) and [can be loaded](https://egeria-project.org/features/metadata-archiving/overview/#loading-open-metadata-archives) as part of the metadata access server's startup configuration, or later, once the server is running.
 
 ![running samples](docs/running-egeria-samples.png)
 
