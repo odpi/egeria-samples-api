@@ -118,7 +118,7 @@ This information is provided from the Egeria deployment environment.
 
 The java samples call an Egeria client, which in turn calls the REST API of Egeria.  The Javadoc for the clients is published here: [https://odpi.github.io/egeria/index.html](https://odpi.github.io/egeria/index.html).
 
-The python samples call the REST APIs directly because Egeria does not have any python client libraries (yet :).
+The python samples call the REST APIs directly because Egeria does not have any python client libraries (yet :).  Details of the REST API for Egeria can be found by linking to the Swagger UI at *serverURLRoot*/swagger-ui.html.
 
 ![Inside the samples](docs/different-client-samples.png)
 
