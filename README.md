@@ -56,10 +56,21 @@ on the command line and press *return*. The code is copied into your new directo
 
 New contributions are added to the git repository using a *Pull Request* from a personal *Fork*.  If you want to contribute to this git repository, then you need to create a fork of the repository and then create a clone of the repository from your fork.
 
+* If this is the first git project you have setup, you need to configure the email address and name using the commands below. The email address should match the email you use for github so that your contributions are recognized.
 ```
-git clone https://github.com/<yourGitUserId>/egeria-samples-api.git
-```
+git config --global user.name 'My Name'
+git config --global user.email 'myuser@myemail.org'
 
+```
+* Go the repository's page on Github at https://github.com/odpi/egeria-samples-api and click on 'Fork' towards the top right of the page. This creates your own copy of the repository which is where you'll keep your work in progress.
+* Next, clone the repository (this copies it down to your local environment):
+    ```
+    git clone https://github.com/<yourGitUserId>/egeria-samples-api.git
+    ```
+* Finally add an additional 'remote' - this makes it easier to retrieve updates other people may have made to the repository - which you'll need to do before pushing a PR.
+    ```
+    git remote add upstream https://github.com/odpi/egeria-samples-api
+    ```
 
 ## Building the samples
 
@@ -67,23 +78,31 @@ Most of the samples are written in Java, although there are a couple that are in
 
 ### Working with Java
 
-Egeria uses version 11 of Java.
+Egeria requires version 11 of Java, but also supports version 17, which is the latest Long Term Service release (LTS).
+
 You will need a Java Development Kit (JDK) installed on your machine in order to build the Java samples. (A JDK will include a JRE.)
 
-There are various JREs/JDKs available, and you may even have one pre-installed on your system. You can check if java is already installed by running the command `java -version` from the command-line.
+There are various JREs/JDKs available, and you may even have one pre-installed on your system. You can check if java is already installed by running the command `java --version` from the command-line.
 
 Java can be installed by:
 
-* Downloading the OpenJDK 11 (LTS) HotSpot JVM from [Adoptium](https://adoptium.net/).
+* Downloading the OpenJDK 11 (LTS) HotSpot JVM from [Adoptium](https://adoptium.net/en-GB/installation/).
 * Running the installer that is downloaded.
 
 Alternatively you may wish to install from your package manager such as homebrew on MacOS.
 
 The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
 
+For Linux, macOS:
 ```
 ./gradlew build
 ```
+
+Or for Windows:
+```
+./gradle.bat build
+```
+
 Samples that need some work on are described in the [GitHub Issues](https://github.com/odpi/egeria-samples-api/issues) for this repository.
 
 ### Working with Python
