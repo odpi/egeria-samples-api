@@ -76,6 +76,7 @@ Alternatively you may wish to install from your package manager such as homebrew
 
 ## Building the samples
 
+The project is build using Gradle which can be installed using this [link](https://gradle.org/install/).
 Most of the samples are written in Java, although there are a couple that are in python.  The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
 
 ```
