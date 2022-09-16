@@ -21,7 +21,7 @@ A glossary provides definitions for terms that are used in an organization.
 This task adds the definition for the three types of emission scopes to
 Coco Pharmaceuticals' sustainability glossary.
 
-## Glossary Terms
+## Glossary Terms 
 
 ![GlossaryTerms](../../docs/sustainability-samples-glossary.drawio.png)
 
