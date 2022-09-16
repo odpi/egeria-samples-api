@@ -78,23 +78,31 @@ Most of the samples are written in Java, although there are a couple that are in
 
 ### Working with Java
 
-Egeria uses version 11 of Java.
+Egeria requires version 11 of Java, but also supports version 17, which is the latest Long Term Service release (LTS).
+
 You will need a Java Development Kit (JDK) installed on your machine in order to build the Java samples. (A JDK will include a JRE.)
 
-There are various JREs/JDKs available, and you may even have one pre-installed on your system. You can check if java is already installed by running the command `java -version` from the command-line.
+There are various JREs/JDKs available, and you may even have one pre-installed on your system. You can check if java is already installed by running the command `java --version` from the command-line.
 
 Java can be installed by:
 
-* Downloading the OpenJDK 11 (LTS) HotSpot JVM from [Adoptium](https://adoptium.net/).
+* Downloading the OpenJDK 11 (LTS) HotSpot JVM from [Adoptium](https://adoptium.net/en-GB/installation/).
 * Running the installer that is downloaded.
 
 Alternatively you may wish to install from your package manager such as homebrew on MacOS.
 
 The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
 
+For Linux, macOS:
 ```
 ./gradlew build
 ```
+
+Or for Windows:
+```
+./gradle.bat build
+```
+
 Samples that need some work on are described in the [GitHub Issues](https://github.com/odpi/egeria-samples-api/issues) for this repository.
 
 ### Working with Python
