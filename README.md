@@ -192,7 +192,7 @@ The samples for cataloguing data show how to catalog data and link/tag it, so it
 
 ### Building the sustainability dashboard
 
-In order to keep sustainability in people's minds (and to provide data to the different stakeholders),
+In order to keep sustainability in people's minds (and to provide data to the different stakeholders ),
 Coco Pharmaceuticals want to have a set of dashboards and reports that shows their current status and how it is changing
 (better or worse) over time.
 
