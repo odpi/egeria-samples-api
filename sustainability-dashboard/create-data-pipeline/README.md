@@ -36,6 +36,12 @@ The resulting report looks something like this:
 
 ![Dashboard](../../docs/Sustainability-Dashboard-Enterprise.png)
 
+## Structure of the sample
+
+There are two python files in the sample:
+
+* `base_environment.py` provides standard methods to call REST APIs.
+* `simulatedDashboardPipeline.py` is where the specifics for recording the pipeline in Egeria is located.
 
 
 

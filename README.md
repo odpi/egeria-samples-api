@@ -60,10 +60,15 @@ New contributions are added to the git repository using a *Pull Request* from a 
 git clone https://github.com/<yourGitUserId>/egeria-samples-api.git
 ```
 
-## Getting the Java Compiler
+
+## Building the samples
+
+Most of the samples are written in Java, although there are a couple that are in python.
+
+### Working with Java
 
 Egeria uses version 11 of Java.
-You will need a Java Development Kit (JDK) installed on your machine in order to build Egeria. (A JDK will include a JRE.)
+You will need a Java Development Kit (JDK) installed on your machine in order to build the Java samples. (A JDK will include a JRE.)
 
 There are various JREs/JDKs available, and you may even have one pre-installed on your system. You can check if java is already installed by running the command `java -version` from the command-line.
 
@@ -74,20 +79,30 @@ Java can be installed by:
 
 Alternatively you may wish to install from your package manager such as homebrew on MacOS.
 
-## Building the samples
-
-Most of the samples are written in Java, although there are a couple that are in python.  The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
+The java samples are built using gradle.  This will start to run automatically when you load the project into an IDE such as IntelliJ.  Alternatively, gradle will run from the root directory of the downloaded project using the following command:
 
 ```
 ./gradlew build
 ```
 Samples that need some work on are described in the [GitHub Issues](https://github.com/odpi/egeria-samples-api/issues) for this repository.
 
+### Working with Python
+
+Egeria uses version 3 of python.  There are various mechanisms for acquiring python for your machine.  You will need the following packages to be installed.
+
+* csv
+* time
+* os
+* urllib3
+* requests
+* pprint
+* json
+
 ## Running the samples
 
-Each sample is located in its own directory.   The [samples-ensemble](https://github.com/odpi/egeria-samples-api/tree/main/samples-ensemble) module will run all the samples.
+Each sample is located in its own directory.   The [samples-ensemble](https://github.com/odpi/egeria-samples-api/tree/main/samples-ensemble) module will run all the Java samples.
 
-They are all client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/)
+The samples are all client applications that call a [Metadata Access Server](https://egeria-project.org/concepts/metadata-access-server/) running on the [Egeria OMAG Server Platform](https://egeria-project.org/concepts/omag-server-platform/)
 
 ![running samples](docs/running-egeria-samples.png)
 
@@ -99,6 +114,14 @@ Whether you choose to run a sample individually or through *samples-ensemble*, y
 
 This information is provided from the Egeria deployment environment.
 
+## Structure of the samples
+
+The java samples call an Egeria client, which in turn calls the REST API of Egeria.  The Javadoc for the clients is published here: [https://odpi.github.io/egeria/index.html](https://odpi.github.io/egeria/index.html).
+
+The python samples call the REST APIs directly because Egeria does not have any python client libraries (yet :).
+
+![Inside the samples](docs/different-client-samples.png)
+
 ## Understanding Sustainability Reporting
 
 The GHG Protocol defines strategies, processes and techniques for collecting and calculating carbon emissions. Three classes of emissions are defined:
@@ -109,9 +132,11 @@ The GHG Protocol defines strategies, processes and techniques for collecting and
 
 Most reporting is focused on Scope 1 and Scope 2; for Scope 3 there is often a limited focus on business travel.
 
-Calculations for each kind of emission is specified in the GHG Protocol. Reference data supporting these calculations varies over time, location, and sometimes industry - so we need to perform the calculations on a location by location basis and then aggregate this information. This is also useful since we can more easily compare locations and identify the different challenges they face. As we perform these calculations it is important that we record how the results are computed, including which reference data were used..
+Calculations for each kind of emission is specified in the GHG Protocol. Reference data supporting these calculations varies over time, location, and sometimes industry - so we need to perform the calculations on a location by location basis and then aggregate this information. This is also useful since we can more easily compare locations and identify the different challenges they face. As we perform these calculations it is important that we record how the results are computed, including which reference data were used.
 
 ## More information on the samples
+
+The samples are divided into related groups ...
 
 ### Extending the governance program
 
