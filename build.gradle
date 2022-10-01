@@ -55,7 +55,7 @@ allprojects {
         egeriaversion = '3.11'
         slf4jVersion = '1.7.36'
         jacksonVersion = '2.13.3'
-        jupiterVersion = '5.9.0'
+        jupiterVersion = '5.9.1'
         httpclientVersion = '4.5.13'
         springwebVersion = '5.3.19'
     }
