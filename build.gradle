@@ -52,7 +52,7 @@ allprojects {
      */
 
     ext {
-        egeriaversion = '3.11'
+        egeriaversion = '3.15'
         slf4jVersion = '1.7.36'
         jacksonVersion = '2.13.3'
         jupiterVersion = '5.9.0'
