@@ -17,7 +17,7 @@ plugins {
     // Checks for unnecessary & problematic dependencies
     id 'com.autonomousapps.dependency-analysis' version "1.13.1"
     // helps resolve log implementation clashes
-    id 'dev.jacomet.logging-capabilities' version "0.10.0"
+    id 'dev.jacomet.logging-capabilities' version "0.11.1"
     // This plugin helps resolve jakarta/javax clashes
     id 'de.jjohannes.java-ecosystem-capabilities' version "0.4"
 }
