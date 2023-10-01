@@ -12,7 +12,7 @@ jobs:
     name: "PR Verification"
     if: startsWith(github.repository,'odpi/')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         name: Checkout source
       - name: Set up JDK
         uses: actions/setup-java@v3
